@@ -13,6 +13,11 @@ public class CameraRig : MonoBehaviour {
     [SerializeField]
     private float rotateSpeed = 1;
 
+    private void Start() {
+        transform.position = followPoint.position;
+        transform.rotation = followPoint.rotation;
+    }
+
     private void LateUpdate() {
         transform.position = Vector3.Lerp(transform.position, followPoint.position, moveSpeed * Time.deltaTime);
         transform.rotation = Quaternion.Slerp(transform.rotation, followPoint.rotation, rotateSpeed * Time.deltaTime);
