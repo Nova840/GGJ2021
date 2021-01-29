@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMove : MonoBehaviour {
 
     [SerializeField]
-    private float moveSpeed = 5;
+    private float moveSpeed = 10;
 
     [SerializeField]
-    private float acceleration = .25f;
+    private float acceleration = 150;
 
     [SerializeField]
     private float gravity = 10;
