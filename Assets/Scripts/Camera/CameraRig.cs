@@ -1,0 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class CameraRig : MonoBehaviour {
+
+    [SerializeField]
+    private Transform followPoint = default;
+
+    [SerializeField]
+    private float moveSpeed = 1;
+
+    [SerializeField]
+    private float rotateSpeed = 1;
+
+    private void LateUpdate() {
+        transform.position = Vector3.Lerp(transform.position, followPoint.position, moveSpeed * Time.deltaTime);
+        transform.rotation = Quaternion.Slerp(transform.rotation, followPoint.rotation, rotateSpeed * Time.deltaTime);
+    }
+
+}
