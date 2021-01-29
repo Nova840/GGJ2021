@@ -32,7 +32,7 @@ public class PlayerMove : MonoBehaviour {
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
 
         Vector3 moveVectorXZ = new Vector3(inputVector.x, 0, inputVector.y);
-        moveVectorXZ *= moveSpeed * Time.deltaTime;
+        moveVectorXZ *= moveSpeed;
         if (characterController.isGrounded) {
             currentYVelocity = 0;
         } else {
@@ -41,7 +41,7 @@ public class PlayerMove : MonoBehaviour {
 
         smoothMoveVectorXZ = Vector3.MoveTowards(smoothMoveVectorXZ, moveVectorXZ, acceleration * Time.deltaTime);
         Vector3 move = new Vector3(smoothMoveVectorXZ.x, currentYVelocity, smoothMoveVectorXZ.z);
-        characterController.Move(move);
+        characterController.Move(move * Time.deltaTime);
     }
 
 }

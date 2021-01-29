@@ -192,7 +192,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   acceleration: 0.25
-  gravity: 0.01
+  gravity: 10
 --- !u!114 &2188048845860963685
 MonoBehaviour:
   m_ObjectHideFlags: 0
