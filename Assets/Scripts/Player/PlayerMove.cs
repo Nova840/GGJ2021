@@ -13,6 +13,9 @@ public class PlayerMove : MonoBehaviour {
     [SerializeField]
     private float gravity = 10;
 
+    [SerializeField]
+    private float jumpHeight = 1;
+
     private CharacterController characterController;
 
     private float currentYVelocity = 0;
@@ -34,7 +37,11 @@ public class PlayerMove : MonoBehaviour {
         Vector3 moveVectorXZ = new Vector3(inputVector.x, 0, inputVector.y);
         moveVectorXZ *= moveSpeed;
         if (characterController.isGrounded) {
-            currentYVelocity = 0;
+            if (Input.GetButtonDown("Jump")) {
+                currentYVelocity = Mathf.Sqrt(-jumpHeight * -2 * gravity);//formula to calculate velocity from jump height
+            } else {
+                currentYVelocity = -2;
+            }
         } else {
             currentYVelocity -= gravity * Time.deltaTime;//multiplied by delta time twice on purpose
         }

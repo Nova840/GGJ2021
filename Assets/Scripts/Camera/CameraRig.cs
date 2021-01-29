@@ -13,6 +13,12 @@ public class CameraRig : MonoBehaviour {
     [SerializeField]
     private float rotateSpeed = 1;
 
+    public static Camera Camera { get; private set; }
+
+    private void Awake() {
+        Camera = GetComponentInChildren<Camera>();
+    }
+
     private void Start() {
         transform.position = followPoint.position;
         transform.rotation = followPoint.rotation;
