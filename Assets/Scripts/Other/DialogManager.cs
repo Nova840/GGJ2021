@@ -77,6 +77,7 @@ public class DialogManager : MonoBehaviour {
         float time = charInterval;//so it starts on the first char
         int charsTyped = 0;
 
+        bool yielded = false;
         while (charsTyped < textToType.Length) {
             time += Time.deltaTime;
             int charsToTypeThisFrame = Mathf.FloorToInt(time / charInterval);
@@ -86,7 +87,11 @@ public class DialogManager : MonoBehaviour {
             text.text = ColorString(textToType, charsTyped);
             SetSize();
 
+            if (yielded && Input.GetButtonDown("Fire1")) {
+                break;
+            }
             yield return null;
+            yielded = true;
         }
         while (!Input.GetButtonDown("Fire1")) {
             yield return null;
@@ -115,7 +120,7 @@ public class DialogManager : MonoBehaviour {
     }
 
     public static void AddToTypeQueue(params string[] textsToType) {
-            instance.typeQueue.AddRange(textsToType);
+        instance.typeQueue.AddRange(textsToType);
     }
 
 }
