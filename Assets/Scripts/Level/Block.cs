@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
+    [SerializeField]
+    private float dragSpeed = 1;
+
     public enum BlockType {
         Red, Yellow, Green
     }
@@ -29,6 +32,7 @@ public class Block : MonoBehaviour {
 
     private float followPositionY = 0;
 
+
     private Quaternion startingRotation;
 
     private void Awake() {
@@ -36,7 +40,7 @@ public class Block : MonoBehaviour {
     }
 
     private void Start() {
-        startingRotation = thisRigidbody.rotation;
+        startingRotation = transform.rotation;
     }
 
     //https://gamedev.stackexchange.com/a/75662
@@ -60,14 +64,21 @@ public class Block : MonoBehaviour {
         if (FollowMousePosition) {
             bool didHit = GetMousePositionOnXZPlane(followPositionY, out Vector3 point);
             if (didHit) {
-                thisRigidbody.velocity = (point - thisRigidbody.position) / Time.fixedDeltaTime;
+                Vector3 currentTargetPosition = Vector3.Lerp(thisRigidbody.position, point, dragSpeed * Time.deltaTime);
+                thisRigidbody.velocity = (currentTargetPosition - thisRigidbody.position) / Time.fixedDeltaTime;
 
+                Vector3 pos = thisRigidbody.position;
+                pos.y = followPositionY;
+                thisRigidbody.MovePosition(pos);
             } else {
                 FollowMousePosition = false;
             }
         }
-        thisRigidbody.rotation = startingRotation;
         thisRigidbody.angularVelocity = Vector3.zero;
+    }
+
+    private void LateUpdate() {
+        transform.rotation = startingRotation;
     }
 
 }
