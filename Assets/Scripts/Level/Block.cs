@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class Block : MonoBehaviour {
 
+    public enum BlockType {
+        Red, Yellow, Green
+    }
+
+    [SerializeField]
+    private BlockType blockType = BlockType.Red;
+    public BlockType Type { get => blockType; }
+
     private Rigidbody thisRigidbody;
 
     private bool followMousePosition = false;

@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -6410638469458124543, guid: 315bd228f9aed9249806533e2dc5db9f, type: 3}
+      propertyPath: blockType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 599112640085187102, guid: 315bd228f9aed9249806533e2dc5db9f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 68e66b951562bdc46a2efa1c412cff39, type: 2}
     - target: {fileID: 8027245590170055371, guid: 315bd228f9aed9249806533e2dc5db9f, type: 3}
       propertyPath: m_Name
       value: Red Block
