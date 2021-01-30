@@ -555,9 +555,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 495031385}
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1064,9 +1072,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1333664349}
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1224,9 +1240,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 565527094}
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1377,9 +1401,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 239252364}
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1580,9 +1612,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1751680217}
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 

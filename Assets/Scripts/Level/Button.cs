@@ -17,7 +17,7 @@ public class Button : MonoBehaviour {
     private bool canGreenBlockPush = true;
 
     [SerializeField]
-    private MovingThing[] thingsToTurnOn = new MovingThing[0];
+    private MovingThing[] thingsToMove = new MovingThing[0];
 
     private int numThingsInTrigger = 0;
 
@@ -25,7 +25,7 @@ public class Button : MonoBehaviour {
         if (IsPushable(other.gameObject)) {
             numThingsInTrigger++;
             if (numThingsInTrigger == 1) {
-                foreach (MovingThing thing in thingsToTurnOn) {
+                foreach (MovingThing thing in thingsToMove) {
                     thing.TurnOn();
                 }
             }
@@ -36,7 +36,7 @@ public class Button : MonoBehaviour {
         if (IsPushable(other.gameObject)) {
             numThingsInTrigger--;
             if (numThingsInTrigger == 0) {
-                foreach (MovingThing thing in thingsToTurnOn) {
+                foreach (MovingThing thing in thingsToMove) {
                     thing.TurnOff();
                 }
             }
