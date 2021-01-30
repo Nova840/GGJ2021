@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,6 +12,8 @@ public class MaskPart : MonoBehaviour {
     private Renderer[] allChildRenderers;
 
     private static List<MaskPart> allMaskPartsInScene = new List<MaskPart>();
+
+    private bool pickedUp = false;
 
     private void Awake() {
         allChildRenderers = GetComponentsInChildren<Renderer>();
@@ -36,7 +39,8 @@ public class MaskPart : MonoBehaviour {
     }
 
     private void AddMaskPartAndMakeInvisible() {
-        //update UI
+        MaskUI.Refresh();
+        pickedUp = true;
         foreach (Renderer r in allChildRenderers) {
             r.enabled = false;
         }
@@ -48,6 +52,10 @@ public class MaskPart : MonoBehaviour {
 
     public static int NumberOfMaskPartsInScene() {
         return allMaskPartsInScene.Count;
+    }
+
+    public static int NumberOfPickedUpMaskPartsInScene() {
+        return allMaskPartsInScene.Count(mp => mp.pickedUp);
     }
 
 }
