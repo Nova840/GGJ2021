@@ -503,7 +503,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationPortalName
-      value: p1
+      value: start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
@@ -637,11 +637,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationSceneName
-      value: Hub
+      value: Nova's Level
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationPortalName
-      value: p3
+      value: start
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
