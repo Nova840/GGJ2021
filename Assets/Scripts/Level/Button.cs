@@ -26,6 +26,7 @@ public class Button : MonoBehaviour {
             numThingsInTrigger++;
             if (numThingsInTrigger == 1) {
                 foreach (MovingThing thing in thingsToMove) {
+                    if (!thing) continue;
                     thing.TurnOn();
                 }
             }
@@ -37,6 +38,7 @@ public class Button : MonoBehaviour {
             numThingsInTrigger--;
             if (numThingsInTrigger == 0) {
                 foreach (MovingThing thing in thingsToMove) {
+                    if (!thing) continue;
                     thing.TurnOff();
                 }
             }
