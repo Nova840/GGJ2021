@@ -15,19 +15,28 @@ public class PlayerInteract : MonoBehaviour {
             bool didHit = Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask);
             if (didHit) {
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Block")) {
-                    currentMovingBlock = hit.collider.GetComponentInParent<Block>();
-                    currentMovingBlock.FollowMousePosition = true;
+                    PickUpBlock(hit.collider.GetComponentInParent<Block>());
                 } else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("NPC")) {
                     hit.collider.GetComponentInParent<NPC>().Interact();
                 }
             }
         }
         if (Input.GetButtonUp("Fire1")) {
-            if (currentMovingBlock) {
-                currentMovingBlock.FollowMousePosition = false;
-            }
-            currentMovingBlock = null;
+            DropCurrentBlock();
         }
+    }
+
+    private void PickUpBlock(Block block) {
+        DropCurrentBlock();
+        currentMovingBlock = block;
+        currentMovingBlock.FollowMousePosition = true;
+    }
+
+    public void DropCurrentBlock() {
+        if (currentMovingBlock) {
+            currentMovingBlock.FollowMousePosition = false;
+        }
+        currentMovingBlock = null;
     }
 
 }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -33,8 +34,8 @@ public class Portal : MonoBehaviour {
 
     private static Transform GetSpawnpointForPortal(string pName) {
         if (!spawnpointsForPortals.ContainsKey(pName)) {
-            Debug.LogError("Portal \"" + pName + "\" does not exist in this scene.");
-            return null;
+            Debug.Log("Portal \"" + pName + "\" does not exist in this scene, picking the first portal.");
+            return spawnpointsForPortals.First().Value;
         }
         return spawnpointsForPortals[pName];
     }
@@ -52,9 +53,11 @@ public class Portal : MonoBehaviour {
 
     public static void TeleportToLastAssignedPortal(CharacterController characterController) {
         characterController.enabled = false;
-        characterController.transform.position = GetSpawnpointForPortal(lastDestinationPortalName).position;
-        characterController.transform.rotation = GetSpawnpointForPortal(lastDestinationPortalName).rotation;
+        Transform spawnpoint = GetSpawnpointForPortal(lastDestinationPortalName);
+        characterController.transform.position = spawnpoint.position;
+        characterController.transform.rotation = spawnpoint.rotation;
         characterController.enabled = true;
+        characterController.GetComponent<PlayerInteract>().DropCurrentBlock();//let go of block when teleporting
     }
 
 }
