@@ -15,13 +15,16 @@ public class PlayerInteract : MonoBehaviour {
             bool didHit = Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, layerMask);
             if (didHit) {
                 if (hit.collider.gameObject.layer == LayerMask.NameToLayer("Block")) {
-                    PickUpBlock(hit.collider.GetComponentInParent<Block>());
+                    Block block = hit.collider.GetComponentInParent<Block>();
+                    if (!IsStandingAboveBlock(block)) {
+                        PickUpBlock(block);
+                    }
                 } else if (hit.collider.gameObject.layer == LayerMask.NameToLayer("NPC")) {
                     hit.collider.GetComponentInParent<NPC>().Interact();
                 }
             }
         }
-        if (Input.GetButtonUp("Fire1")) {
+        if (Input.GetButtonUp("Fire1") || IsStandingAboveBlock(currentMovingBlock)) {
             DropCurrentBlock();
         }
     }
@@ -37,6 +40,15 @@ public class PlayerInteract : MonoBehaviour {
             currentMovingBlock.FollowMousePosition = false;
         }
         currentMovingBlock = null;
+    }
+
+    private bool IsStandingAboveBlock(Block block) {
+        if (!block) return false;
+        Vector3 playerPosXZ = transform.position;
+        playerPosXZ.y = block.transform.position.y;
+        float xzDist = Vector3.Distance(playerPosXZ, block.transform.position);
+        float yDist = transform.position.y - block.transform.position.y;
+        return xzDist <= 2 && yDist >= 0 && yDist <= 5;//block/jump size
     }
 
 }
