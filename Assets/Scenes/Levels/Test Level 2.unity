@@ -178,6 +178,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mask Part (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 42726092024584179, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
+      propertyPath: partName
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
 --- !u!1001 &27511531
@@ -329,9 +333,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1215393632}
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -394,9 +406,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1738134982}
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -459,9 +479,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1191872397}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 741798225}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[2]
+      value: 
+      objectReference: {fileID: 1444764081}
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -579,6 +615,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mask Part (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 42726092024584179, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
+      propertyPath: partName
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
 --- !u!1001 &194099782
@@ -635,6 +675,10 @@ PrefabInstance:
     - target: {fileID: 42726092024584141, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
       propertyPath: m_Name
       value: Mask Part (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 42726092024584179, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
+      propertyPath: partName
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
@@ -918,9 +962,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 869717005}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 1862769932}
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1044,9 +1100,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1391506007}
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1293,6 +1357,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mask Part (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 42726092024584179, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
+      propertyPath: partName
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
 --- !u!1 &649086983
@@ -1398,9 +1466,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 339948085}
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1514,6 +1590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Mask Part (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 42726092024584179, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
+      propertyPath: partName
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f7bed261fb92af42b6978885da2e14e, type: 3}
 --- !u!1001 &741798224
@@ -1611,6 +1691,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 34.9
       objectReference: {fileID: 0}
+    - target: {fileID: 679284721042224092, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.27
+      objectReference: {fileID: 0}
+    - target: {fileID: 679284721042224092, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.95
+      objectReference: {fileID: 0}
+    - target: {fileID: 679284721042224092, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 34.92
+      objectReference: {fileID: 0}
     - target: {fileID: 679284721062933612, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: m_Name
       value: Portal
@@ -1625,7 +1717,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933613, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.58
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933613, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1765,9 +1857,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1452682916}
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1830,9 +1930,25 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1191872397}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 741798225}
+    - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
+      propertyPath: thingsToMove.Array.data[2]
+      value: 
+      objectReference: {fileID: 1444764081}
     - target: {fileID: 8042013975670540788, guid: 28c0f988c93f1ff4e83438981d183776, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -1903,9 +2019,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 1862769932}
+    - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 869717005}
     - target: {fileID: 8042013975670540788, guid: 585b9f457a2c29e42a8b680b0ea5cb96, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -2196,9 +2324,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 769667939}
     - target: {fileID: 8042013975670540788, guid: 96753a1163a0b054f9ef1ee92a7c949b, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -2265,9 +2401,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 434787658}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 29628878}
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
@@ -3491,9 +3639,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[0]
+      value: 
+      objectReference: {fileID: 434787658}
+    - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
+      propertyPath: thingsToMove.Array.data[1]
+      value: 
+      objectReference: {fileID: 29628878}
     - target: {fileID: 8042013975670540788, guid: 80f7e3652a5a6fd49b4bd5a8861c7c49, type: 3}
       propertyPath: thingsToTurnOn.Array.data[0]
       value: 
