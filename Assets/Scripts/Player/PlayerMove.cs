@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -28,6 +29,7 @@ public class PlayerMove : MonoBehaviour {
 
     private void Update() {
         Move();
+        RespawnIfFallenOff();
     }
 
     private void Move() {
@@ -49,6 +51,12 @@ public class PlayerMove : MonoBehaviour {
         smoothMoveVectorXZ = Vector3.MoveTowards(smoothMoveVectorXZ, moveVectorXZ, acceleration * Time.deltaTime);
         Vector3 move = new Vector3(smoothMoveVectorXZ.x, currentYVelocity, smoothMoveVectorXZ.z);
         characterController.Move(move * Time.deltaTime);
+    }
+
+    private void RespawnIfFallenOff() {
+        if (transform.position.y <= -100) {
+            Portal.TeleportToLastAssignedPortal(characterController);
+        }
     }
 
 }
