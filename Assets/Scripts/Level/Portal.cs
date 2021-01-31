@@ -16,6 +16,9 @@ public class Portal : MonoBehaviour {
     [SerializeField]
     private string destinationPortalName = "";
 
+    [SerializeField]
+    private bool changeIfDestinationLevelIsComplete = false;
+
     private static string lastDestinationPortalName = "start";//teleport to starting portal
 
     private static Dictionary<string, Transform> spawnpointsForPortals = new Dictionary<string, Transform>();
@@ -25,6 +28,16 @@ public class Portal : MonoBehaviour {
             Debug.LogError("Two or more portals have the same name.");
         }
         spawnpointsForPortals.Add(portalName, transform.Find("Spawnpoint"));
+    }
+
+    private void Start() {
+        if (changeIfDestinationLevelIsComplete) {
+            bool destinationLevelComplete = PlayerPrefs.GetFloat(destinationSceneName + " % Complete", 0) >= 1;
+            if (destinationLevelComplete) {
+                transform.Find("Mesh/Not Completed").gameObject.SetActive(false);
+                transform.Find("Mesh/Completed").gameObject.SetActive(true);
+            }
+        }
     }
 
     private void OnDestroy() {
