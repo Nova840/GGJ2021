@@ -8,7 +8,7 @@ public class LoadGameScene : MonoBehaviour {
     [SerializeField]
     private string gameSceneName = "Game";
 
-    private void Awake() {
+    private void Start() {
         SceneManager.LoadScene(gameSceneName, LoadSceneMode.Additive);
     }
 
