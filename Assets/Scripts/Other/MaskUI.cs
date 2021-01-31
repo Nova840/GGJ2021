@@ -21,11 +21,18 @@ public class MaskUI : MonoBehaviour {
     [SerializeField]
     private Image completionFillImage = default;
 
+    [SerializeField]
+    private Image rickImage = default;
+
     private List<GameObject> shards = new List<GameObject>();
 
     private static MaskUI instance;
 
+    private static int isRick = 0;
+
     private void Awake() {
+        if (isRick == 0)
+            isRick = Random.Range(1, 1001);
         instance = this;
     }
 
@@ -53,7 +60,11 @@ public class MaskUI : MonoBehaviour {
         HubManager.ForEachLevelName(ln => {
             sumPercents += PlayerPrefs.GetFloat(ln + " % Complete", 0);
         });
-        instance.completionFillImage.fillAmount = sumPercents / HubManager.NumberOfLevels();
+        if (isRick == 1) {
+            instance.rickImage.fillAmount = sumPercents / HubManager.NumberOfLevels();
+        } else {
+            instance.completionFillImage.fillAmount = sumPercents / HubManager.NumberOfLevels();
+        }
     }
 
 }
