@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/Nova's Level.unity
     guid: 9d3b093ceb322e94c95a0d6bc7e57212
+  - enabled: 1
+    path: Assets/Scenes/Levels/Test Level 3.unity
+    guid: 6c12ba0e68e924fc890fabfe5c5329d6
   m_configObjects: {}
