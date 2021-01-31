@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class MaskUI : MonoBehaviour {
@@ -16,6 +17,9 @@ public class MaskUI : MonoBehaviour {
 
     [SerializeField]
     private float spaceBetweenImages = 30;
+
+    [SerializeField]
+    private Image completionFillImage = default;
 
     private List<GameObject> shards = new List<GameObject>();
 
@@ -35,15 +39,21 @@ public class MaskUI : MonoBehaviour {
         }
         instance.shards.Clear();
 
-        int partsPickedUp = MaskPart.NumberOfPickedUpMaskPartsInScene();
+        int numPartsPickedUp = MaskPart.NumberOfPickedUpMaskPartsInScene();
         for (int i = 0; i < MaskPart.NumberOfMaskPartsInScene(); i++) {
             GameObject shard = Instantiate(instance.shardPrefab, instance.shardContainer);
             RectTransform rt = shard.GetComponent<RectTransform>();
             rt.anchoredPosition = new Vector2(instance.spaceBetweenImages * i, 0);
-            if (i < partsPickedUp) {
+            if (i < numPartsPickedUp) {
                 rt.GetComponent<Image>().sprite = instance.pickedUpShardSprite;
             }
         }
+
+        float sumPercents = 0;
+        HubManager.ForEachLevelName(ln => {
+            sumPercents += PlayerPrefs.GetFloat(ln + " % Complete", 0);
+        });
+        instance.completionFillImage.fillAmount = sumPercents / HubManager.NumberOfLevels();
     }
 
 }

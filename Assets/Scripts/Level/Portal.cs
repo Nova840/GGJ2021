@@ -11,6 +11,7 @@ public class Portal : MonoBehaviour {
 
     [SerializeField]
     private string destinationSceneName = "";
+    public string DestinationSceneName { get => destinationSceneName; }
 
     [SerializeField]
     private string destinationPortalName = "";

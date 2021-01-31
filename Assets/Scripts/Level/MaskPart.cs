@@ -34,6 +34,7 @@ public class MaskPart : MonoBehaviour {
     public void OnTriggerEnter(Collider other) {
         if (other.gameObject.layer == LayerMask.NameToLayer("Player")) {
             PlayerPrefs.SetInt(GetUniqueName(), 1);
+            PlayerPrefs.SetFloat(SceneManager.GetActiveScene().name + " % Complete", (float)NumberOfPickedUpMaskPartsInScene() / NumberOfMaskPartsInScene());
             AddMaskPartAndMakeInvisible();
         }
     }
