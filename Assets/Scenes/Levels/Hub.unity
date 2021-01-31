@@ -2816,7 +2816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationPortalName
-      value: p2
+      value: p5
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: changeIfDestinationLevelIsComplete
@@ -3647,11 +3647,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationSceneName
-      value: Hub
+      value: Test Level 3
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationPortalName
-      value: p5
+      value: start
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: changeIfDestinationLevelIsComplete
@@ -3888,11 +3888,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationSceneName
-      value: Hub
+      value: Test Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: destinationPortalName
-      value: p4
+      value: start
       objectReference: {fileID: 0}
     - target: {fileID: 679284721062933614, guid: 53bcbf13672185c4f8af158faec972d1, type: 3}
       propertyPath: changeIfDestinationLevelIsComplete
