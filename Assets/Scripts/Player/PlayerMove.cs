@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour {
 
     [SerializeField]
     private float moveSpeed = 10;
+    public float MoveSpeed { get => moveSpeed; }
 
     [SerializeField]
     private float acceleration = 150;
@@ -36,6 +37,7 @@ public class PlayerMove : MonoBehaviour {
         Vector2 inputVector = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         inputVector = Vector2.ClampMagnitude(inputVector, 1);
 
+
         Vector3 moveVectorXZ = new Vector3(inputVector.x, 0, inputVector.y);
         moveVectorXZ *= moveSpeed;
         if (characterController.isGrounded) {
@@ -51,6 +53,10 @@ public class PlayerMove : MonoBehaviour {
         smoothMoveVectorXZ = Vector3.MoveTowards(smoothMoveVectorXZ, moveVectorXZ, acceleration * Time.deltaTime);
         Vector3 move = new Vector3(smoothMoveVectorXZ.x, currentYVelocity, smoothMoveVectorXZ.z);
         characterController.Move(move * Time.deltaTime);
+
+        if (smoothMoveVectorXZ != Vector3.zero) {
+            transform.rotation = Quaternion.LookRotation(smoothMoveVectorXZ, Vector3.up);
+        }
     }
 
     private void RespawnIfFallenOff() {
