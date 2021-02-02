@@ -41,6 +41,8 @@ public class MaskUI : MonoBehaviour {
     }
 
     public static void Refresh() {
+        if (!instance) return;//if not loaded yet
+
         while (instance.shards.Count > 0) {
             Destroy(instance.shards[0]);
         }

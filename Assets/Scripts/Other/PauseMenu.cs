@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour {
 
     public void DeleteAllSaveData() {
         PlayerPrefs.DeleteAll();
+        Portal.ResetLastPortalName();
         SceneManager.LoadScene("Hub");
     }
 

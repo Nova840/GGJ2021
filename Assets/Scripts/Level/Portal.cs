@@ -74,4 +74,8 @@ public class Portal : MonoBehaviour {
         characterController.GetComponent<PlayerInteract>().DropCurrentBlock();//let go of block when teleporting
     }
 
+    public static void ResetLastPortalName() {
+        lastDestinationPortalName = "start";
+    }
+
 }
