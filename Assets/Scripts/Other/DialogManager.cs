@@ -115,8 +115,8 @@ public class DialogManager : MonoBehaviour {
 
     private void SetSize() {
         backgroundImage.sizeDelta = text.GetRenderedValues(false) + new Vector2(2, 1) * backgroundEdgeBufferSpace;
-        backgroundImage.anchoredPosition = originalBackgroundAnchoredPosition + Vector2.up * backgroundEdgeBufferSpace / 2;
-        textContainer.anchoredPosition = originalContainerAnchoredPosition - Vector2.one * backgroundEdgeBufferSpace / 2;
+        backgroundImage.anchoredPosition = originalBackgroundAnchoredPosition - Vector2.up * backgroundEdgeBufferSpace / 2;//changed + to - because it's on the bottom of the screen
+        textContainer.anchoredPosition = originalContainerAnchoredPosition + Vector2.one * backgroundEdgeBufferSpace / 2;//changed - to + because it's on the bottom of the screen
     }
 
     public static void AddToTypeQueue(params string[] textsToType) {
